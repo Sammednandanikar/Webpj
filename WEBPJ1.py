@@ -5,7 +5,6 @@ st.set_page_config(layout="wide")
 
 st.title("The Topper Company")
 
-# Company introduction paragraph
 content = """
 Welcome to The Topper Company, where innovation meets expertise in the world of software solutions. 
 Founded with a passion for cutting-edge technology, we specialize in crafting intuitive software tailored to meet the unique needs of modern businesses. 
@@ -18,13 +17,10 @@ st.markdown(content)
 
 st.subheader("Our team")
 
-# Load data from CSV file
 df = pd.read_csv("data.csv", sep=",")
 
-# Define columns for layout
 col1, col2, col3 = st.columns(3)
 
-# Display team members in each column
 for index, row in df.iterrows():
     if index < 4:
         with col1:
